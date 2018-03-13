@@ -29,6 +29,19 @@ db.session.commit(student)
 
 - What does the following code do?
 
+```py
+@app.route('/students', methods=["GET", "POST"])
+def index():
+   if request.method == "POST":
+       student = Student('Joel', 'Burton')
+       db.session.add(student)
+       db.session.commit(student) 
+       return redirect(url_for("index"))
+    return render_template("index.html", students=Student.query.all())
+```
+
+- What does the following code do?
+
 ```sh
 flask db init
 ```
