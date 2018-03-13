@@ -37,7 +37,7 @@ def index():
        db.session.add(student)
        db.session.commit(student) 
        return redirect(url_for("index"))
-    return render_template("index.html", students=Student.query.all())
+   return render_template("index.html", students=Student.query.all())
 ```
 
 - What does the following code do?
