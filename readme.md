@@ -17,7 +17,7 @@
 6. What is SQL?
 7. What is a relational database?
 8. How would you explain what a redirect is?
-9. What is the difference between `redirect` and `render_template`?
+9. What is the difference between `redirect` and `render_template`? When would you use one or the other?
 
 - What does the following code do?
 
