@@ -75,7 +75,7 @@ students as an argument so the html page can render all of the students on the p
 ```sh
 flask db init
 ```
-1) initiliazes migration on a particular project and allows versions of the database to be tracked. 
+1) initiliazes migration on a particular project and allows versions of the database to be tracked. Creates migration folder.
 
 - What does the following code do?
 
@@ -138,21 +138,21 @@ return render_template("edit.html", id = id)
 "/students" GET
 "/students/new" GET
 "/students/" POST
-"/students/show" GET
+"/students/<int:id>/" GET
 "/students/<int:id>/edit" GET
-"/students/show" PATCH
-"students/<int:id>/delete DELETE
+"/students/<int:id>/" PATCH
+"/students/<int:id>/delete DELETE
 
 
 
 - Imagine we want to add another resource for `excuses` which is a 1 to Many with `students` - write out all 7 RESTful routes that nest excuses inside of students (include the HTTP verb and endpoint)
 
-"students/messages" GET
-"students/<int:id>/messages" GET
-"students/<int:id>/messages/new" GET
-"students/<int:id>/messages POST
-"students/<int:id>/messages/<int:message-id>/edit" GET
-"students/<int:id>/messages/<int:message-id>/show" PATCH
-"students/<int:id>/messages/<int:message-id>/delete" DELETE
+"students/excuses" GET
+"students/<int:id>/excuses" GET
+"students/<int:id>/excuses/new" GET
+"students/<int:id>/excuses POST
+"students/<int:id>/excuses/<int:message-id>/edit" GET
+"students/<int:id>/excuses/<int:message-id>/" PATCH
+"students/<int:id>/excuses/<int:message-id>/" DELETE
 
 
