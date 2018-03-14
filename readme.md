@@ -64,7 +64,7 @@ This is an index route for students on a flask app that allows for a student to 
 flask db init
 ```
 
-initializes a database
+initializes a databases
 
 * What does the following code do?
 
@@ -86,10 +86,19 @@ updgrade and saves a database
 
 GET /students
 GET /students/new
-POST /students/create
-PATCH /students/id/edit
-GET /students/show
-GET /students
+POST /students
+GET /students/id/
+GET /students/edit
+PATCH /students/id
 DELETE /students/id
 
 * Imagine we want to add another resource for `excuses` which is a 1 to Many with `students` - write out all 7 RESTful routes that nest excuses inside of students (include the HTTP verb and endpoint)
+
+GET students/int/excuses
+GET students/int/excuses/new
+POST students/int/excuses
+
+GET students/int/excuses/int
+GET students/int/excuses/int/edit
+PATCH students/id/excuses/id
+DELETE students/id/excuses/id
