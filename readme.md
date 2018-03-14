@@ -17,11 +17,11 @@
 4.  What is a route or endpoint?
     <!-- corresponds to the location on the file system you want to load (in the url)-->
 5.  What is the difference between GET and POST?
-    <!-- GET is idempotent, POST is not -->
+    <!-- GET is idempotent, POST is not, GET grabs information from the server, POST can make changes to information on the server -->
 6.  How would you explain what RESTful routing is?
     <!-- a convention by which resources, the functions associated with displaying their information, and their routes are organized -->
 7.  What is SQL?
-    <!-- a language for manipulating db's -->
+    <!-- a language for manipulating relational dbs -->
 8.  What is a relational database?
     <!-- a db where information in tables corresponds to information in other tables -->
 9.  How would you explain what a redirect is?
