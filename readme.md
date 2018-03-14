@@ -17,8 +17,8 @@
 6.  How would you explain what RESTful routing is? It is a convention in the software community of naming your routes. /users, /users/new, users/<int:id>/show...
 7.  What is SQL? SQL is the database language.
 8.  What is a relational database? a relational database is one where there is a one to many association. the tables are usually all linked to the main table via an unique id.
-9.  How would you explain what a redirect is?
-10. What is the difference between `redirect` and `render_template`? When would you use one or the other? A redirect is directing the one function to another. Render_template communicates to the browser that we need to take our route to a new CRUD template that is stored in our templates folder. The function/server is responding with a new html page.
+9.  How would you explain what a redirect is? A redirect is 2 requests and 2 responses. POST request to server, server response with a location in the header (our url_for). 2nd request is a GET request with the location we were given and server responds with a GET of the location.
+10. What is the difference between `redirect` and `render_template`? When would you use one or the other? A redirect is directing the one function to another, not idempotent request. Render_template communicates to the browser that we need to take our route to a new CRUD template that is stored in our templates folder. A request to the server is responding with a new html page.
 
 * What does the following code do? The following code creates an instance of the Student model, gives it the data and then starts the process of adding that data to our database(db,session.add) and places it in the database table with the commit. closing that request to add data.
 
@@ -28,7 +28,7 @@ db.session.add(student)
 db.session.commit(student)
 ```
 
-* What does the following code do?
+* What does the following code do? it's handling the two methods that the request could be. if we our sending a POST request to our server with adding the new student data to our database then we want to store that data to the db and respond with a redirect. If it's a GET request just to render the index page with our information
 
 ```py
 @app.route('/students', methods=["GET", "POST"])
@@ -67,7 +67,7 @@ flask db upgrade
   POST "/students/new"
   GET "/students/<int:id>
   GET "/students/<int:id>/edit"  
-  POST "/students/<int:id>
+  PATCH "/students/<int:id>
   DELETE "/students/<int:id>
 
 * Imagine we want to add another resource for `excuses` which is a 1 to Many with `students` - write out all 7 RESTful routes that nest excuses inside of students (include the HTTP verb and endpoint)
