@@ -59,3 +59,9 @@ flask db upgrade
 ```
 
 - Given the resource `students` - write out all 7 RESTful routes (include the HTTP verb and endpoint)
+
+- Imagine we want to add another resource for `excuses` which is a 1 to Many with `students` - write out all 7 RESTful routes that nest excuses inside of students (include the HTTP verb and endpoint)
+
+
+
+
