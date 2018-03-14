@@ -105,6 +105,7 @@ GET /students/<int:id>/edit [show edit page]
 PATCH /students/<int:id>/edit [edit student]
 DELETE /students/<int:id> [delete student]
 
+correct:
 *GET /students
 *GET /students/new
 *POST /students
@@ -122,6 +123,7 @@ GET /students/<int:id>/excuses/<int:exucse_id>/edit [show edit page]
 PATCH /students/<int:id>/excuses/<int:excuse_id>/edit [edit the excuse for one student]
 DELETE /students/int:id/excuses/<int:excuse_id> [delete the excuse for one student]
 
+correct:
 *GET /students/<int:id>/excuses
 *GET /students/<int:id>/excuses/new
 *POST /students/<int:id>/excuses
