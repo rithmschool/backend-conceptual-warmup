@@ -10,7 +10,7 @@
 
 1. What is Jinja2 used for?
 
-Jinja is a template lanuge tool used with the Flask framework to integrate python data
+Jinja is a template language tool used with the Flask framework to integrate python data
 into HTML pages.
 
 2. What is a migration? What is the purpose of a migration?
